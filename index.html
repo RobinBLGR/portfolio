@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robin BELLENGUER - PORTFOLIO</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+            <div class="menu-icon">
+              <i class="fas fa-bars"></i>
+            </div>
+            <ul>
+              <li><a href="#">Accueil</a></li>
+              <li><a href="#a_propos">À propos</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#competences">Compétences</a></li>
+              <li><a href="#portfolio">Réalisations</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+        <section id="a_propos">
+
+            <div class="texte_moi">
+                <h1>Robin BELLENGUER</h1>
+                <h2>Développeur web freelance</h2>
+            </div>
+
+            <div class="quisuisje">
+                <div class="photo_blabla">
+                    <img src="images/robin_bellenguer.png"> 
+                    <h3>À propos de moi</h3>
+                </div>
+                <div class="presentation">
+                    <p>Je m'appelle Robin Bellenguer, j'ai toujours été attiré par la création de sites web. Puis j'ai finalement décidé de franchir le pas et de me lancer.</p>
+                    <p>Désormais, je suis diplômé d'OpenClassrooms "développeur web". Je propose mes services pour vous permettre de concrétiser vos idées et vos envies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h3>Mes services</h3>
+            <div class="cadres_services">
+                <div class="cadre_unique">
+                    <img src="images/creation-de-sites-web.png">
+                    <h4>Création de site</h4>
+                    <p>Création de sites web <strong>responsive</strong>, c'est-à-dire adaptés à tous les supports. Design <strong>moderne et épuré</strong> mettant en valeur le contenu du site. Intégration de <strong>fontionnalités avancées</strong>.</p>
+                </div>
+                <div class="cadre_unique">
+                    <img src="images/performance.png">
+                    <h4>Optimisation</h4>
+                    <p>Optimisation du contenu et de la structure pour une meilleure <strong>expérience utilisateur</strong>. Optimisation du code pour des <strong>performances optimales</strong>.</p>
+                </div>
+                <div class="cadre_unique">
+                    <img src="images/referencementbleu.png">
+                    <h4>Référencement</h4>
+                    <p><strong>Analyse approfondie</strong> du positionnement actuel du site web sur les moteurs de recherche. Définition d'une <strong>stratégie SEO</strong> sur mesure pour <strong>améliorer la visibilité</strong> du site.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="competences">
+            <h3>Mes compétences</h3>
+            <div class="btn_cptces">
+                <button><img src="images/html-5.png"></button>
+                <button><img src="images/css-3.png"></button>
+                <button><img src="images/sass.png"></button>
+                <button><img src="images/js.png"></button>
+                <button><img src="images/react.png"></button>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <!-- Les images s'insèrent ici dynamiquement -->
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <img id="modal-image" src="" alt="">
+              <h3 id="modal-title"></h3>
+              <p id="modal-description"></p>
+            </div>
+          </div>
+
+        <section id="contact">
+            <div class="texte_contact">
+                <div class="logo_contact">
+                    <h3>CONTACT</h3>
+                    <img src="images/poster.png">
+                </div>
+                <p>Vous avez un projet en tête ? Il concerne la création d'un site web ? Vous avez déjà un site web et vous souhaitez l'optimiser ou améliorer son référencement ? </p>
+                <p>N'hésitez pas à me contacter en remplissant ce formulaire. Je vous répondrai dans les meilleurs délais.</p>
+            </div>
+            <form class="form_contact">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+                <label for="name">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"> 
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Réalisé par Robin BELLENGUER - Tous droits réservés.</p>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
