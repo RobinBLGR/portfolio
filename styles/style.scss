@@ -106,14 +106,8 @@ main {
     padding: 10px;
     margin-top: 30px;
     border-radius: 20px;
-    background-image: url('images/fondwebdev.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
     gap: 30px;
     justify-content: center;
-    align-items: center; /* Ajouté pour aligner verticalement */
-    min-height: 300px; /* Ajouté pour donner une hauteur minimale */
 
     @media (max-width: 768px) {
         display: flex;
@@ -124,33 +118,59 @@ main {
         width: 90%;
         }
 
-    .texte_moi {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 20px;
-
-        h1 {
+        .texte_moi {
+            position: relative;
+            height: 100%;
+        }
+          
+          .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          }
+          
+          .texte_moi img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+            opacity: 0.9;
+          }
+          
+          .text-overlay h1 {
             font-size: 2.8rem;
             margin: 0;
             @include title_color;
           }
-
-          h2 {
+          
+          .text-overlay h2 {
             font-size: 1.8rem;
             margin: 10px 0 0 0;
-            color: black;
+            color: white;
           }
-    }
 
 .quisuisje {
-    background-color: #5C9EAD;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
+    padding-top: 20px;
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    p {
+        margin: 10px;
+
+        img {
+            height: 20px;
+            padding-right: 10px;
+        }
+    }
 
     @media (max-width: 768px) {
         display: flex;
@@ -159,6 +179,9 @@ main {
 
     .presentation {
         width: 90%;
+        border: 2px solid #5C9EAD;
+        border-radius: 10px;
+        margin-top: 10px;
     }
 }
     .photo_blabla {
@@ -468,7 +491,7 @@ main {
         display: flex;
         flex-direction: column;
         padding: 20px;
-        width: 50%;
+        width: 52%;
         background-color: #5C9EAD;
         align-items: center;
         border-radius: 20px;

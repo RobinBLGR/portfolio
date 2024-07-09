@@ -98,14 +98,8 @@ main {
   padding: 10px;
   margin-top: 30px;
   border-radius: 20px;
-  background-image: url("images/fondwebdev.png");
-  background-size: cover;
-  background-position: center;
-  color: white;
   gap: 30px;
   justify-content: center;
-  align-items: center; /* Ajouté pour aligner verticalement */
-  min-height: 300px; /* Ajouté pour donner une hauteur minimale */
 }
 @media (max-width: 768px) {
   #a_propos {
@@ -118,29 +112,52 @@ main {
   }
 }
 #a_propos .texte_moi {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 20px;
+  position: relative;
+  height: 100%;
 }
-#a_propos .texte_moi h1 {
+#a_propos .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+#a_propos .texte_moi img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+#a_propos .text-overlay h1 {
   font-size: 2.8rem;
   margin: 0;
   color: #FFA500;
 }
-#a_propos .texte_moi h2 {
+#a_propos .text-overlay h2 {
   font-size: 1.8rem;
   margin: 10px 0 0 0;
-  color: black;
+  color: white;
 }
 #a_propos .quisuisje {
-  background-color: #5C9EAD;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 20px;
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+#a_propos .quisuisje p {
+  margin: 10px;
+}
+#a_propos .quisuisje p img {
+  height: 20px;
+  padding-right: 10px;
 }
 @media (max-width: 768px) {
   #a_propos .quisuisje {
@@ -150,6 +167,9 @@ main {
 }
 #a_propos .quisuisje .presentation {
   width: 90%;
+  border: 2px solid #5C9EAD;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 #a_propos .photo_blabla {
   display: flex;
@@ -450,7 +470,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 50%;
+  width: 52%;
   background-color: #5C9EAD;
   align-items: center;
   border-radius: 20px;
