@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       portfolio.appendChild(mesProjets);
 
       // Parcourir les données du JSON et créer les éléments HTML
-      data.forEach(item => {
+      data.forEach((item, index) => {
         const projetUnique = document.createElement('div');
         projetUnique.classList.add('projet_unique');
         projetUnique.setAttribute('data-titre', item.title);
@@ -50,6 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         projetUnique.appendChild(img);
         mesProjets.appendChild(projetUnique);
+
+        // Ajout du séparateur vertical
+        if (index < data.length - 1) {
+          const separateur = document.createElement('div');
+          separateur.classList.add('vertical-line');
+          mesProjets.appendChild(separateur);
+        }
       });
     })
     .catch(error => console.error('Erreur lors du chargement des données :', error));
