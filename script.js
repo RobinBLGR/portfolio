@@ -61,27 +61,4 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error('Erreur lors du chargement des données :', error));
 
-  // Modale
-  const modal = document.getElementById('modal');
-  const modalImage = document.getElementById('modal-image');
-  const modalTitle = document.getElementById('modal-title');
-  const modalDescription = document.getElementById('modal-description');
-  const closeModal = document.querySelector('.close-modal');
-
-  function openModal(src, title, description) {
-    modalImage.src = src;
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-    modal.style.display = 'block';
-  }
-
-  closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  });
 });

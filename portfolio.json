@@ -1,14 +1,20 @@
 [
     {
       "title": "Mon Vieux Grimoire",
-      "src": "images/vieuxgrimoire.png"
+      "src": "images/vieuxgrimoire.png",
+      "description": "Description détaillée du projet 1",
+      "link": "https://example.com/projet1"
     },
     {
       "title": "Bookiiii",
-      "src": "images/booki.png"
+      "src": "images/booki.png",
+      "description": "Description détaillée du projet 1",
+      "link": "https://example.com/projet1"
     },
     {
       "title": "Plantes et potagers",
-      "src": "images/vieuxgrimoire.png"
+      "src": "images/vieuxgrimoire.png",
+      "description": "Description détaillée du projet 1",
+      "link": "https://example.com/projet1"
     }
   ]
