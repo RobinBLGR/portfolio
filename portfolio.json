@@ -2,19 +2,25 @@
     {
       "title": "Mon Vieux Grimoire",
       "src": "images/vieuxgrimoire.png",
-      "description": "Description détaillée du projet 1",
+      "description": "Description détaillée du projet 12",
+      "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive (tablette et mobile)",
+      "competences": "Maîtrise des langages HTML5 ET CSS3",
       "link": "https://example.com/projet1"
     },
     {
       "title": "Bookiiii",
       "src": "images/booki.png",
       "description": "Description détaillée du projet 1",
+      "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive (tablette et mobile)",
+      "competences": "Maîtrise des langages HTML5 ET CSS3",
       "link": "https://example.com/projet1"
     },
     {
       "title": "Plantes et potagers",
       "src": "images/vieuxgrimoire.png",
       "description": "Description détaillée du projet 1",
+      "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive (tablette et mobile)",
+      "competences": "Maîtrise des langages HTML5 ET CSS3",
       "link": "https://example.com/projet1"
     }
   ]

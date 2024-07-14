@@ -293,7 +293,7 @@ main {
   box-shadow: 2px 2px #444444;
 }
 
-#portfolio {
+#portfolioSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,12 +301,12 @@ main {
   margin-bottom: 30px;
 }
 @media (max-width: 768px) {
-  #portfolio {
+  #portfolioSection {
     margin-bottom: 0;
   }
 }
 
-#portfolio .mes_projets {
+#portfolioSection .mes_projets {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -316,13 +316,13 @@ main {
   padding: 20px;
 }
 @media (max-width: 768px) {
-  #portfolio .mes_projets {
+  #portfolioSection .mes_projets {
     gap: 30px;
     flex-direction: column;
   }
 }
 
-#portfolio .mes_projets .projet_unique {
+#portfolioSection .mes_projets .projet_unique {
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -337,7 +337,7 @@ main {
   justify-content: center; /* Centrage horizontal des éléments */
 }
 
-#portfolio .mes_projets .projet_unique:last-child {
+#portfolioSection .mes_projets .projet_unique:last-child {
   border-right: none; /* Suppression de la ligne verticale pour le dernier élément */
 }
 
@@ -352,7 +352,7 @@ main {
   }
 }
 
-#portfolio .mes_projets .projet_unique img {
+#portfolioSection .mes_projets .projet_unique img {
   height: 250px;
   width: 100%;
   -o-object-fit: contain;
@@ -520,4 +520,51 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalImage {
+  height: 200px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-content .image-reste {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

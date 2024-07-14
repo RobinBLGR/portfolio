@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.toggle('show');
   });
 
-  // Nouvelle fonction pour masquer le menu après un clic sur un lien
+  // Masquer le menu après un clic sur un lien
   menuLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
@@ -17,48 +17,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Fichier JSON pour afficher le portfolio
   // Récupérer les données du fichier JSON
   fetch('portfolio.json')
-    .then(response => response.json())
-    .then(data => {
-      // Sélectionner l'élément où afficher les images
-      const portfolio = document.getElementById('portfolio');
-
-      // Créer le titre "Mon portfolio"
-      const title = document.createElement('h3');
-      title.textContent = 'Mon portfolio';
-      portfolio.appendChild(title);
-
-      // Créer le bloc "mes_projets"
-      const mesProjets = document.createElement('div');
-      mesProjets.classList.add('mes_projets');
-      portfolio.appendChild(mesProjets);
+  .then(response => response.json())
+  .then(data => {
+      const mesProjets = document.querySelector('#portfolioSection .mes_projets');
 
       // Parcourir les données du JSON et créer les éléments HTML
-      data.forEach((item, index) => {
-        const projetUnique = document.createElement('div');
-        projetUnique.classList.add('projet_unique');
-        projetUnique.setAttribute('data-titre', item.title);
+      data.forEach(item => {
+          const projetUnique = document.createElement('div');
+          projetUnique.classList.add('projet_unique');
 
-        const img = document.createElement('img');
-        img.src = item.src;
-        img.alt = item.title;
-        img.addEventListener('click', () => {
-          openModal(item.src, item.title, item.description);
-        });
+          const img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.title;
+          img.addEventListener('click', () => {
+              openModal(item.title, item.description, item.src, item.competences);
+          });
 
-        projetUnique.appendChild(img);
-        mesProjets.appendChild(projetUnique);
-
-        // Ajout du séparateur vertical
-        if (index < data.length - 1) {
-          const separateur = document.createElement('div');
-          separateur.classList.add('vertical-line');
-          mesProjets.appendChild(separateur);
-        }
+          projetUnique.appendChild(img);
+          mesProjets.appendChild(projetUnique);
       });
-    })
-    .catch(error => console.error('Erreur lors du chargement des données :', error));
+  })
+  .catch(error => console.error('Erreur lors du chargement des données :', error));
 
 });
+
+// Fonction pour ouvrir la modale
+function openModal(title, description, image, competences) {
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalCompetences').innerText = competences;
+  document.getElementById('modalImage').src = image;
+  document.getElementById('projectModal').style.display = 'block';
+}
+
+// Fonction pour fermer la modale
+function closeModal() {
+  document.getElementById('projectModal').style.display = 'none';
+}
