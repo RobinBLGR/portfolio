@@ -32,27 +32,46 @@ document.addEventListener('DOMContentLoaded', () => {
           img.src = item.src;
           img.alt = item.title;
           img.addEventListener('click', () => {
-              openModal(item.title, item.description, item.src, item.competences);
-          });
+            openModal(item.title, item.description, item.src, item.competences);
+        });
 
-          projetUnique.appendChild(img);
-          mesProjets.appendChild(projetUnique);
-      });
-  })
-  .catch(error => console.error('Erreur lors du chargement des données :', error));
- 
+        projetUnique.appendChild(img);
+        mesProjets.appendChild(projetUnique);
+    });
+})
+.catch(error => console.error('Erreur lors du chargement des données :', error));
 });
 
 // Fonction pour ouvrir la modale
 function openModal(title, description, image, competences) {
+document.getElementById('modalTitle').innerText = title;
+document.getElementById('modalDescription').innerText = description;
+document.getElementById('modalCompetences').innerText = competences;
+document.getElementById('modalImage').src = image;
+document.getElementById('projectModal').style.display = 'block';
+}
+
+// Fonction pour fermer la modale
+function closeModal() {
+document.getElementById('projectModal').style.display = 'none';
+}
+
+// Fermer la modale en cliquant en dehors du contenu de la modale
+window.onclick = function(event) {
+const modal = document.getElementById('projectModal');
+if (event.target == modal) {
+closeModal();
+}
+}
+
+function openModal(title, description, image, competences) {
+  console.log('Title:', title);
+  console.log('Description:', description);
+  console.log('Image:', image);
+  console.log('Competences:', competences);
   document.getElementById('modalTitle').innerText = title;
   document.getElementById('modalDescription').innerText = description;
   document.getElementById('modalCompetences').innerText = competences;
   document.getElementById('modalImage').src = image;
   document.getElementById('projectModal').style.display = 'block';
-}
-
-// Fonction pour fermer la modale
-function closeModal() {
-  document.getElementById('projectModal').style.display = 'none';
 }
