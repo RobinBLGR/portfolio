@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   })
   .catch(error => console.error('Erreur lors du chargement des données :', error));
-
+ 
 });
 
 // Fonction pour ouvrir la modale
