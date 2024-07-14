@@ -19,59 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Récupérer les données du fichier JSON
   fetch('portfolio.json')
-  .then(response => response.json())
-  .then(data => {
+    .then(response => response.json())
+    .then(data => {
       const mesProjets = document.querySelector('#portfolioSection .mes_projets');
 
       // Parcourir les données du JSON et créer les éléments HTML
       data.forEach(item => {
-          const projetUnique = document.createElement('div');
-          projetUnique.classList.add('projet_unique');
+        const projetUnique = document.createElement('div');
+        projetUnique.classList.add('projet_unique');
 
-          const img = document.createElement('img');
-          img.src = item.src;
-          img.alt = item.title;
-          img.addEventListener('click', () => {
-            openModal(item.title, item.description, item.src, item.competences);
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.title;
+        img.addEventListener('click', () => {
+          openModal(item.title, item.description, item.src, item.problematique, item.competences);
         });
 
         projetUnique.appendChild(img);
         mesProjets.appendChild(projetUnique);
-    });
-})
-.catch(error => console.error('Erreur lors du chargement des données :', error));
+      });
+    })
+    .catch(error => console.error('Erreur lors du chargement des données :', error));
 });
 
-// Fonction pour ouvrir la modale
-function openModal(title, description, image, competences) {
-document.getElementById('modalTitle').innerText = title;
-document.getElementById('modalDescription').innerText = description;
-document.getElementById('modalCompetences').innerText = competences;
-document.getElementById('modalImage').src = image;
-document.getElementById('projectModal').style.display = 'block';
-}
-
-// Fonction pour fermer la modale
-function closeModal() {
-document.getElementById('projectModal').style.display = 'none';
-}
 
 // Fermer la modale en cliquant en dehors du contenu de la modale
 window.onclick = function(event) {
-const modal = document.getElementById('projectModal');
-if (event.target == modal) {
-closeModal();
-}
-}
-
-function openModal(title, description, image, competences) {
-  console.log('Title:', title);
-  console.log('Description:', description);
-  console.log('Image:', image);
-  console.log('Competences:', competences);
-  document.getElementById('modalTitle').innerText = title;
-  document.getElementById('modalDescription').innerText = description;
-  document.getElementById('modalCompetences').innerText = competences;
-  document.getElementById('modalImage').src = image;
-  document.getElementById('projectModal').style.display = 'block';
+  const modal = document.getElementById('projectModal');
+  if (event.target == modal) {
+    closeModal();
+  }
 }

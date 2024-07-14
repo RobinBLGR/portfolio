@@ -554,6 +554,11 @@ footer {
   justify-content: center;
   gap: 20px;
 }
+.modal-content .desc-cptces {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
 
 .close {
   color: #aaa;

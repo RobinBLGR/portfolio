@@ -95,7 +95,7 @@
 
         <div id="portfolioSection">
             <h3>Mon portfolio / Mes réalisations</h3>
-            <div class="mes_projets">ICI</div>
+            <div class="mes_projets"></div>
         </div>
 
         <div id="projectModal" class="modal">
@@ -104,8 +104,10 @@
                 <h2 id="modalTitle"></h2>
                 <div class="image-reste">
                     <img id="modalImage" src="" alt="">
-                    <p id="modalDescription"></p>
-                    <p id="modalCompetences">ici</p>
+                    <div class="desc-cptces">
+                        <p id="modalDescription"></p>
+                        <p id="modalCompetences"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -145,9 +147,11 @@
     </div>
     <script src="script.js"></script>
     <script>
-        function openModal(title, description, image) {
+        function openModal(title, description, image, competences) {
           document.getElementById('modalTitle').innerText = title;
           document.getElementById('modalDescription').innerText = description;
+          document.getElementById('modalCompetences').innerText = competences;
+          
           document.getElementById('modalImage').src = image;
           document.getElementById('projectModal').style.display = 'block';
         }

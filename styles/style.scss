@@ -565,7 +565,7 @@ footer {
   #modalImage {
     height: 200px;
   }
-
+  
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -582,9 +582,13 @@ footer {
         justify-content: center;
         gap: 20px;
     }
+
+    .desc-cptces {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
   }
-
-
   
   .close {
     color: #aaa;
