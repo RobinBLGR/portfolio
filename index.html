@@ -45,8 +45,8 @@
                     <h3>À propos de moi</h3>
                 </div>
                 <div class="presentation">
-                    <p><img src="images/guillemet.png">Je m'appelle Robin Bellenguer et je suis développeur web freelance. Je suis diplômé d'OpenClassrooms et propose mes services pour vous permettre de concrétiser vos idées et vos envies.</p>
-                    <p>Mon objectif est de créer des sites web attrayants et fonctionnels. Je m'efforce de travailler en étroite collaboration avec vous pour comprendre vos objectifs et vos exigences, afin de vous proposer des solutions sur mesure.</p>
+                    <p><img src="images/guillemet.png">Je m'appelle Robin Bellenguer et je suis <strong>développeur web freelance</strong>. Je suis diplômé d'OpenClassrooms et propose mes services pour vous permettre de <strong>concrétiser vos idées et vos envies</strong>.</p>
+                    <p>Mon objectif est de créer des sites web <strong>attrayants et fonctionnels</strong>. Je m'efforce de travailler en étroite collaboration avec vous pour comprendre vos objectifs et vos exigences, afin de vous proposer des <strong>solutions sur mesure</strong>.</p>
                 </div>
             </div>
         </section>
@@ -94,7 +94,7 @@
         </section>
 
         <div id="portfolioSection">
-            <h3>Mon portfolio / Mes réalisations</h3>
+            <h3>Mes réalisations</h3>
             <div class="mes_projets"></div>
         </div>
 
@@ -147,7 +147,8 @@
 
     <footer>
         <p>&copy; 2024 - Réalisé par Robin BELLENGUER - Tous droits réservés.</p>
-        Icone github et threads
+        <div class="icones-footer"> <a href="https://www.threads.net/@rob1_bzh?hl=fr"><img src="images/threads.png"></a> <a href="https://github.com/RobinBLGR"><img src="images/github.png"></a></div>
+
     </footer>
     </div>
     <script src="script.js"></script>
@@ -157,6 +158,7 @@
           document.getElementById('modalDescription').innerText = description;
           document.getElementById('modalCompetences').innerText = competences;
           document.getElementById('modalProblematique').innerText = problematique;
+          document.getElementById('projectLink').href = link;
           document.getElementById('modalImage').src = image;
           document.getElementById('projectModal').style.display = 'block';
         }

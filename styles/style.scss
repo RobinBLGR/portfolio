@@ -180,6 +180,7 @@ main {
     .presentation {
         width: 90%;
         border: 2px solid #5C9EAD;
+        background-color: #F2F0ED;
         border-radius: 10px;
         margin-top: 10px;
     }
@@ -337,10 +338,12 @@ main {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #F2F0ED;
     border: 2px solid #326273;
     border-radius: 10px;
     padding: 30px;
     gap: 40px;
+    width: 90%;
 
     @media (max-width: 768px) {
         gap: 30px;
@@ -353,34 +356,20 @@ main {
     overflow: hidden;
     cursor: pointer;
     flex: 1;
+    height: 250px;
     border: 2px black solid;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
-    border-right: 2px solid #326273; /* Ajout de la ligne verticale */
-    padding-right: 20px; /* Ajout d'un espacement à droite */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centrage horizontal des éléments */
 }
 
 #portfolioSection .mes_projets .projet_unique:last-child {
     border-right: none; /* Suppression de la ligne verticale pour le dernier élément */
 }
 
-.vertical-line {
-    border-left: 2px solid #FFA500;
-    height: 250px; /* Ajustez la hauteur selon vos besoins */
-    margin: 0 20px;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
-}
-
 #portfolioSection .mes_projets .projet_unique img {
-    height: 250px;
+    height: 100%;
     width: 100%;
-    object-fit: contain; /* Afficher même dimensions pour chaque vignette */
+    object-fit:fill; /* Afficher même dimensions pour chaque vignette */
 }
 
 //GESTION FOND A PRIORI NE FONCTIONNE PAS #PORTFOLIOSECTION
@@ -544,12 +533,20 @@ main {
 // FOOTER
 footer {
     background-color: #326273;
+    display: flex;
+    flex-direction: column;
     color: white;
     text-align: center;
-    min-height: 80px;
+    min-height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .icones-footer {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 10px;
+    }
   }
 
 // MODALE
@@ -567,37 +564,79 @@ footer {
 
   #modalImage {
     height: 200px;
+    border: 2px black solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
   }
   
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 50px;
+    padding-bottom: 120px;
+    border-radius: 10px;
+    border: 1px solid #F2F0ED;
     width: 80%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    @media (max-width: 768px) {
+        padding: 15px;
+        padding-bottom: 30px;
+        }
+
+    h2 {
+        color: #FFA500;
+        font-size: 40px;
+        padding-bottom: 30px;
+
+        @media (max-width: 768px) {
+            padding-bottom: 0;
+            margin-top: 10px;
+            }
+    }
+
     .image-reste {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            }
+
     }
 
     .desc-cptces {
         display: flex;
         flex-direction: column;
         text-align: left;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #F2F0ED;
+
+        @media (max-width: 768px) {
+            align-items: center;
+            }
     }
   }
   
   .close {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    top: 220px;
+    right: 110px;
+
+    @media (max-width: 768px) {
+        position: absolute;
+        top: 80px;
+        right: 60px;
+        }
   }
   
   .close:hover,
@@ -608,10 +647,15 @@ footer {
   }
 
   #modalLink {
-    background-color: #5C9EAD;
+    background-color: #326273;
     padding: 15px;
     border-radius: 10px;
     width: 15%;
     text-align: center;
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+        width: 50%;
+        }
   }
   
