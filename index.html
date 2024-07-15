@@ -107,6 +107,10 @@
                     <div class="desc-cptces">
                         <p id="modalDescription"></p>
                         <p id="modalCompetences"></p>
+                        <p id="modalProblematique"></p>
+                        <div id="modalLink">
+                            <a id="projectLink" href="" target="_blank">Lien Github</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,15 +147,16 @@
 
     <footer>
         <p>&copy; 2024 - Réalisé par Robin BELLENGUER - Tous droits réservés.</p>
+        Icone github et threads
     </footer>
     </div>
     <script src="script.js"></script>
     <script>
-        function openModal(title, description, image, competences) {
+        function openModal(title, description, image, competences, problematique, link) {
           document.getElementById('modalTitle').innerText = title;
           document.getElementById('modalDescription').innerText = description;
           document.getElementById('modalCompetences').innerText = competences;
-          
+          document.getElementById('modalProblematique').innerText = problematique;
           document.getElementById('modalImage').src = image;
           document.getElementById('projectModal').style.display = 'block';
         }

@@ -4,16 +4,16 @@
       "src": "images/vieuxgrimoire.png",
       "description": "Description : Description détaillée du projet 12",
       "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive",
-      "competences": "HTML, CSS, JavaScript",
+      "competences": "HTML, CSS",
       "link": "https://example.com/projet1"
     },
     {
-      "title": "Bookiiii",
+      "title": "Booki",
       "src": "images/booki.png",
-      "description": "Description détaillée du projet 1",
-      "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive",
-      "competences": "Maîtrise des langages HTML5 ET CSS3",
-      "link": "https://example.com/projet1"
+      "description": "Description : Gestion complexe d'un site en HTML et CSS et prise en compte des versions responsives tablette et mobile.",
+      "problematique": "Problématique : Difficulté à appréhender le système des blocs, d'où la nécessité de procéder au découpage de la maquette.",
+      "competences": "Compétences : HTML5 / CSS3 / Maquettage",
+      "link": "https://github.com/RobinBLGR/OpenClasseroomsProject"
     },
     {
       "title": "Plantes et potagers",

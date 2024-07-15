@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = item.src;
         img.alt = item.title;
         img.addEventListener('click', () => {
-          openModal(item.title, item.description, item.src, item.problematique, item.competences);
+          openModal(item.title, item.description, item.src, item.problematique, item.competences, item.link);
         });
 
         projetUnique.appendChild(img);
@@ -42,6 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error('Erreur lors du chargement des données :', error));
 });
 
+function openModal(title, description, image, competences, problematique, link) {
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDescription').innerText = description;
+  document.getElementById('modalCompetences').innerText = competences;
+  document.getElementById('modalProblematique').innerText = problematique;
+  document.getElementById('projectLink').href = link;
+  document.getElementById('modalImage').src = image;
+  document.getElementById('projectModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('projectModal').style.display = 'none';
+}
 
 // Fermer la modale en cliquant en dehors du contenu de la modale
 window.onclick = function(event) {

@@ -192,6 +192,7 @@ main {
   align-items: center;
   width: 100%;
   margin-bottom: 50px;
+  padding-top: 10px;
 }
 @media (max-width: 768px) {
   #services {
@@ -299,6 +300,7 @@ main {
   align-items: center;
   width: 100%;
   margin-bottom: 30px;
+  padding-top: 10px;
 }
 @media (max-width: 768px) {
   #portfolioSection {
@@ -313,7 +315,8 @@ main {
   justify-content: center;
   border: 2px solid #326273;
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
+  gap: 40px;
 }
 @media (max-width: 768px) {
   #portfolioSection .mes_projets {
@@ -572,4 +575,12 @@ footer {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#modalLink {
+  background-color: #5C9EAD;
+  padding: 15px;
+  border-radius: 10px;
+  width: 15%;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
