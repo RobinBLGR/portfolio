@@ -31,11 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.src = item.src;
         img.alt = item.title;
+
+        const titleDiv = document.createElement('div');
+        titleDiv.classList.add('image-title');
+        titleDiv.textContent = item.title;
+
         img.addEventListener('click', () => {
           openModal(item.title, item.description, item.src, item.problematique, item.competences, item.link);
         });
 
         projetUnique.appendChild(img);
+        projetUnique.appendChild(titleDiv);
         mesProjets.appendChild(projetUnique);
       });
     })
@@ -63,22 +69,3 @@ window.onclick = function(event) {
     closeModal();
   }
 }
-
-// Afficher le lien seulement lorsque l'utilisateur a fait défiler la page d'une certaine distance
-window.onscroll = function() {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("back-to-top").style.display = "block";
-  } else {
-    document.getElementById("back-to-top").style.display = "none";
-  }
-}
-
-// Faire défiler la page jusqu'en haut lorsque le lien est cliqué
-document.getElementById("back-to-top").addEventListener("click", function() {
-  document.body.scrollTop = 0; // Pour Safari
-  document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
-});

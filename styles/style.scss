@@ -319,7 +319,7 @@ main {
     }
 }
 
-// PORFOLIO 
+// PORTFOLIO
 #portfolioSection {
     display: flex;
     flex-direction: column;
@@ -327,13 +327,13 @@ main {
     width: 100%;
     margin-bottom: 30px;
     padding-top: 10px;
-
-    @media (max-width: 768px) {
-        margin-bottom: 0;
-    }
-}
-
-#portfolioSection .mes_projets {
+  }
+  
+  #portfolioSection h3 {
+    margin-bottom: 20px;
+  }
+  
+  #portfolioSection .mes_projets {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -346,12 +346,13 @@ main {
     width: 90%;
 
     @media (max-width: 768px) {
-        gap: 30px;
-        flex-direction: column;
-    }
-}
+      display: flex;
+      flex-direction: column;
+      }
 
-#portfolioSection .mes_projets .projet_unique {
+  }
+  
+  #portfolioSection .mes_projets .projet_unique {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -359,67 +360,27 @@ main {
     height: 250px;
     border: 2px black solid;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
-}
-
-#portfolioSection .mes_projets .projet_unique:last-child {
-    border-right: none; /* Suppression de la ligne verticale pour le dernier élément */
-}
-
-#portfolioSection .mes_projets .projet_unique img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  #portfolioSection .mes_projets .projet_unique img {
     height: 100%;
     width: 100%;
-    object-fit:fill; /* Afficher même dimensions pour chaque vignette */
-}
-
-//GESTION FOND A PRIORI NE FONCTIONNE PAS #PORTFOLIOSECTION
-#portfolio .mes_projets .projet_unique::before {
-    content: "";
+    object-fit:fill;
+  }
+  
+  #portfolioSection .mes_projets .projet_unique .image-title {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(50, 98, 115, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#portfolio .mes_projets .projet_unique:hover::before {
-    opacity: 1;
-}
-
-#portfolio .mes_projets .projet_unique::after {
-    content: attr(data-titre);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #326273;
     color: white;
+    padding: 10px;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 1.2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#portfolio .mes_projets .projet_unique:hover::after {
-    opacity: 1;
-}
-
-#portfolio .mes_projets .projet_unique a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    text-decoration: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-#portfolio .mes_projets .projet_unique:hover a {
-    opacity: 1;
-}
+    text-align: center;
+  }
 
 //CONTACT
 #contact  {

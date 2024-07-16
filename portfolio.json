@@ -2,25 +2,25 @@
     {
       "title": "Mon Vieux Grimoire",
       "src": "images/vieuxgrimoire.png",
-      "description": "Description : Description détaillée du projet 12",
-      "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive",
-      "competences": "HTML, CSS",
-      "link": "https://example.com/projet1"
+      "description": "Description : Mise en place du back-end d'un site de référencement et de notation de livres avec création d'un espace membre permettant de créer, ajouter ou supprimer des livres.",
+      "problematique": "Problématique : Gestion du back-end complète avec base de données NoSQL MongoDB. ",
+      "competences": "Compétences acquises : NodeJS / MongoDB / Express",
+      "link": "https://github.com/RobinBLGR/openclassroomsproject6"
     },
     {
       "title": "Booki",
       "src": "images/booki.png",
       "description": "Description : Gestion complexe d'un site en HTML et CSS et prise en compte des versions responsives tablette et mobile.",
       "problematique": "Problématique : Difficulté à appréhender le système des blocs, d'où la nécessité de procéder au découpage de la maquette.",
-      "competences": "Compétences : HTML5 / CSS3 / Maquettage",
+      "competences": "Compétences acquises : HTML5 / CSS3 / Maquettage",
       "link": "https://github.com/RobinBLGR/OpenClasseroomsProject"
     },
     {
-      "title": "Plantes et potagers",
-      "src": "images/vieuxgrimoire.png",
-      "description": "Description détaillée du projet 1",
-      "problematique": "Gestion complexe d'un site en HTML et CSS et prise en compte de la version responsive",
-      "competences": "Maîtrise des langages HTML5 ET CSS3", 
-      "link": "https://example.com/projet1"
+      "title": "Kasa, locations immobilières",
+      "src": "images/Kasa.png",
+      "description": "Description : Refonte totale du design du site de locations immobilières Kasa avec React. Mise en place de l'architecture du site et création des composants réutilisables.",
+      "problematique": "Problématique : Prise en compte de la technologie React qui permet de créer des composants qui sont ensuite réutilisables dans l'application (ex. : carte, collapse, bannière, etc)",
+      "competences": "Compétences acquises : React / Animations CSS / SASS", 
+      "link": "https://github.com/RobinBLGR/OpenClassroomsProject05"
     }
   ]

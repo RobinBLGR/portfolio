@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -303,10 +302,9 @@ main {
   margin-bottom: 30px;
   padding-top: 10px;
 }
-@media (max-width: 768px) {
-  #portfolioSection {
-    margin-bottom: 0;
-  }
+
+#portfolioSection h3 {
+  margin-bottom: 20px;
 }
 
 #portfolioSection .mes_projets {
@@ -323,7 +321,7 @@ main {
 }
 @media (max-width: 768px) {
   #portfolioSection .mes_projets {
-    gap: 30px;
+    display: flex;
     flex-direction: column;
   }
 }
@@ -339,63 +337,24 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-#portfolioSection .mes_projets .projet_unique:last-child {
-  border-right: none; /* Suppression de la ligne verticale pour le dernier élément */
-}
-
 #portfolioSection .mes_projets .projet_unique img {
   height: 100%;
   width: 100%;
   -o-object-fit: fill;
-     object-fit: fill; /* Afficher même dimensions pour chaque vignette */
+     object-fit: fill;
 }
 
-#portfolio .mes_projets .projet_unique::before {
-  content: "";
+#portfolioSection .mes_projets .projet_unique .image-title {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(50, 98, 115, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#portfolio .mes_projets .projet_unique:hover::before {
-  opacity: 1;
-}
-
-#portfolio .mes_projets .projet_unique::after {
-  content: attr(data-titre);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: #326273;
   color: white;
+  padding: 10px;
+  font-size: 16px;
   font-weight: bold;
-  font-size: 1.2rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#portfolio .mes_projets .projet_unique:hover::after {
-  opacity: 1;
-}
-
-#portfolio .mes_projets .projet_unique a {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  text-decoration: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-#portfolio .mes_projets .projet_unique:hover a {
-  opacity: 1;
+  text-align: center;
 }
 
 #contact {
