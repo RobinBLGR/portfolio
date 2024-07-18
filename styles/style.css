@@ -99,6 +99,7 @@ main {
   border-radius: 20px;
   gap: 30px;
   justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   #a_propos {
@@ -224,11 +225,18 @@ main {
   width: 25%;
   box-shadow: 1px 1px black;
 }
-#services .cadre_unique .check_services {
+
+@media (max-width: 1024px) {
+  #services .cadre_unique {
+    padding: 10px;
+  }
+}
+.check_services {
   font-size: 14px;
   margin: 5px;
 }
-#services .cadre_unique .fa-check {
+
+.fa-check {
   color: #FFA500;
   font-size: 1.3em;
   padding-right: 8px;
@@ -255,13 +263,21 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-bottom: 50px;
   color: white;
   border-radius: 10px;
 }
 #competences .btn_cptces {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  #competences .btn_cptces {
+    gap: 20px;
+  }
 }
 @media (max-width: 768px) {
   #competences .btn_cptces {
@@ -308,21 +324,27 @@ main {
 }
 
 #portfolioSection .mes_projets {
+  width: 90%;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  gap: 40px;
   background-color: #F2F0ED;
   border: 2px solid #326273;
   border-radius: 10px;
   padding: 30px;
-  gap: 40px;
-  width: 90%;
+}
+@media (max-width: 1024px) {
+  #portfolioSection .mes_projets {
+    gap: 50px;
+  }
 }
 @media (max-width: 768px) {
   #portfolioSection .mes_projets {
     display: flex;
     flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -330,18 +352,35 @@ main {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  flex: 1;
   height: 250px;
   border: 2px black solid;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 1024px) {
+  #portfolioSection .mes_projets .projet_unique {
+    height: 200px;
+    width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  #portfolioSection .mes_projets .projet_unique {
+    height: 250px;
+    width: 300px;
+  }
+}
 
 #portfolioSection .mes_projets .projet_unique img {
   height: 100%;
-  width: 100%;
+  width: 305px;
   -o-object-fit: fill;
      object-fit: fill;
+}
+@media (max-width: 1024px) {
+  #portfolioSection .mes_projets .projet_unique img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 #portfolioSection .mes_projets .projet_unique .image-title {
@@ -394,6 +433,7 @@ main {
 @media (max-width: 768px) {
   #contact .texte_contact {
     width: 90%;
+    padding-top: 0;
   }
 }
 #contact .texte_contact .logo_contact {
@@ -424,6 +464,10 @@ main {
   background-color: #5C9EAD;
   align-items: center;
   border-radius: 20px;
+}
+#contact .form_contact .nom-prenom {
+  display: flex;
+  gap: 0px;
 }
 @media (max-width: 768px) {
   #contact .form_contact {
@@ -500,7 +544,7 @@ footer .icones-footer {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 50px;
   padding-bottom: 120px;
   border-radius: 10px;
@@ -510,6 +554,7 @@ footer .icones-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 @media (max-width: 768px) {
   .modal-content {
@@ -558,8 +603,8 @@ footer .icones-footer {
   font-size: 28px;
   font-weight: bold;
   position: absolute;
-  top: 220px;
-  right: 110px;
+  top: 10px;
+  right: 10px;
 }
 @media (max-width: 768px) {
   .close {

@@ -108,6 +108,7 @@ main {
     border-radius: 20px;
     gap: 30px;
     justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         display: flex;
@@ -236,23 +237,29 @@ main {
 }
 
 #services .cadre_unique {
-    border: 2px black solid;
-    padding: 20px;
-    text-align: center;
-    border-radius: 20px;
-    width: 25%;
-    box-shadow: 1px 1px black;
+  border: 2px black solid;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  width: 25%;
+  box-shadow: 1px 1px black;
+}
 
-    .check_services {
-        font-size: 14px;
-        margin: 5px;
-    }
+@media (max-width: 1024px) {
+  #services .cadre_unique {
+      padding: 10px;
+  }
+}
 
-    .fa-check {
-        color: #FFA500;
-        font-size: 1.3em; 
-        padding-right: 8px;
-      }
+.check_services {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.fa-check {
+  color: #FFA500;
+  font-size: 1.3em; 
+  padding-right: 8px;
 }
 
 @media (max-width: 768px) {
@@ -279,13 +286,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-bottom: 50px;
     color: white;
     border-radius: 10px;
 
     .btn_cptces {
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
+        justify-content: center;
+
+        @media (max-width: 1024px) {
+          gap: 20px;
+        }    
 
         @media (max-width: 768px) {
             display: flex;
@@ -321,54 +335,73 @@ main {
 
 // PORTFOLIO
 #portfolioSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+#portfolioSection h3 {
+  margin-bottom: 20px;
+}
+
+#portfolioSection .mes_projets {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #F2F0ED;
+  border: 2px solid #326273;
+  border-radius: 10px;
+  padding: 30px;
+
+  @media (max-width: 1024px) {
+    gap: 50px;
+    }
+
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 30px;
-    padding-top: 10px;
+    gap: 30px;
+    }
   }
-  
-  #portfolioSection h3 {
-    margin-bottom: 20px;
-  }
-  
-  #portfolioSection .mes_projets {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #F2F0ED;
-    border: 2px solid #326273;
-    border-radius: 10px;
-    padding: 30px;
-    gap: 40px;
-    width: 90%;
+
+
+#portfolioSection .mes_projets .projet_unique {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 250px;
+  border: 2px black solid;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 1024px) {
+    height: 200px;
+    width: 250px;
+    }
 
     @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      }
+      height: 250px;
+      width: 300px;
+        }
+}
 
-  }
-  
-  #portfolioSection .mes_projets .projet_unique {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    flex: 1;
-    height: 250px;
-    border: 2px black solid;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  #portfolioSection .mes_projets .projet_unique img {
+#portfolioSection .mes_projets .projet_unique img {
+  height: 100%;
+  width: 305px;
+  object-fit: fill;
+
+  @media (max-width: 1024px) {
     height: 100%;
     width: 100%;
-    object-fit:fill;
-  }
-  
+    }
+}
+ 
   #portfolioSection .mes_projets .projet_unique .image-title {
     position: absolute;
     bottom: 0;
@@ -418,6 +451,7 @@ main {
 
         @media (max-width: 768px) {
             width: 90%;
+            padding-top: 0;
             }
 
         .logo_contact {
@@ -449,6 +483,11 @@ main {
         background-color: #5C9EAD;
         align-items: center;
         border-radius: 20px;
+
+        .nom-prenom {
+          display: flex;
+          gap: 0px;
+        }
 
         @media (max-width: 768px) {
             width: 90%;
@@ -532,7 +571,7 @@ footer {
   
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 50px;
     padding-bottom: 120px;
     border-radius: 10px;
@@ -542,6 +581,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     @media (max-width: 768px) {
         padding: 15px;
@@ -590,8 +630,8 @@ footer {
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    top: 220px;
-    right: 110px;
+    top: 10px;
+    right: 10px;
 
     @media (max-width: 768px) {
         position: absolute;
