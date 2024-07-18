@@ -606,13 +606,6 @@ footer .icones-footer {
   top: 10px;
   right: 10px;
 }
-@media (max-width: 768px) {
-  .close {
-    position: absolute;
-    top: 80px;
-    right: 60px;
-  }
-}
 
 .close:hover,
 .close:focus {
