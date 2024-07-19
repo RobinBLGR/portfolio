@@ -4,7 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez le portfolio Robin BELLENGUER, développeur web freelance spécialisé dans la création de site web. Je propose également des services pour optimiser les performances de votre site et un service de référencement pour gagner en popularité sur les moteurs de recherche et donc en trafic.">
-    <title>Robin BELLENGUER - PORTFOLIO</title>
+    
+    <!-- Balisage JSON-LD d'aide au balisage de données structurées de Google -->
+<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "LocalBusiness",
+	  "name": "Robin BELLENGUER",
+	  "image": "https://robinblgr.github.io/portfolio/images/robin_bellenguer.png",
+	  "address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Pontivy",
+		"addressRegion": "Bretagne",
+		"addressCountry": "Fr",
+		"postalCode": "56300"
+	  },
+	  "priceRange": "100 - 400 euros",
+	  "hasOfferCatalog": [
+		{
+		  "@type": "OfferCatalog",
+		  "name": "Création de site web",
+		  "description": "Je propose un service de création de site, allant de la page vitrine à un site plus complexe avec back-end. Je suis spécialisé dans le front-end c'est à dire pluôt l'aspect visuel d'un site."
+		},
+		{
+		  "@type": "OfferCatalog",
+		  "name": "Référencement",
+		  "description": "Améliorez le référencement de votre site internet dans les moteurs de recherche pour qu'il apparaisse dans les premiers résultats, ce qui augmente de fait votre trafic et vous permet de toucher un plus large public."
+		},
+		{
+		  "@type": "OfferCatalog",
+		  "name": "Optimisation",
+		  "description": "Avoir un site lent ou mal optimiser fera fuir vos visiteurs et ne vous permettra pas d'être bien positionné dans les moteurs de recherche. Je propose un travail d'otpimisation de votre site pour qu'il soit rapide à s'afficher et améliorer ainsi l'expérience utilisateur."
+		}
+	  ]
+	}
+</script>
+
+<title>Robin BELLENGUER - PORTFOLIO</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
@@ -126,6 +162,7 @@
               <p>Vous avez un projet de création de site en tête ou vous avez déjà un site web et vous souhaitez l'optimiser ou améliorer son référencement ?</p>
               <p>N'hésitez pas à me contacter en remplissant ce formulaire. Je vous répondrai dans les meilleurs délais.</p>
             </div>
+        
             <form class="form_contact" onsubmit="generateMailTo(event)">
               <label for="objet">Objet :</label>
               <input type="text" id="objet" name="objet" placeholder="Objet du message" required>

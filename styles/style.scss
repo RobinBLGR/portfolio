@@ -325,10 +325,10 @@ main {
     padding: 20px 45px;
     display: inline-block;
     text-align: center;
-    transition: all 0.3s ease-in-out; // Ajout de la transition
+    transition: all 0.3s ease-in-out;
             &:hover {
-                transform: scale(1.05); // Agrandissement du bouton de 10% au survol
-                box-shadow: 2px 2px #444444; // Ombre plus prononcée au survol
+                transform: scale(1.05);
+                box-shadow: 2px 2px #444444;
             }
     }
 }
