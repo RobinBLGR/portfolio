@@ -11,7 +11,7 @@
     padding: 0;
   }
 }
-.container h3 {
+.container h2 {
   font-size: 30px;
   text-align: center;
 }
@@ -566,13 +566,13 @@ footer .icones-footer {
     padding-bottom: 30px;
   }
 }
-.modal-content h2 {
+.modal-content h3 {
   color: #FFA500;
   font-size: 40px;
   padding-bottom: 30px;
 }
 @media (max-width: 768px) {
-  .modal-content h2 {
+  .modal-content h3 {
     padding-bottom: 0;
     margin-top: 10px;
   }
