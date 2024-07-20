@@ -115,16 +115,6 @@ main {
   position: relative;
   height: 100%;
 }
-#a_propos .texte_moi .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
 #a_propos .text-overlay {
   position: absolute;
   top: 50%;
@@ -178,7 +168,7 @@ main {
 }
 #a_propos .quisuisje .presentation {
   width: 90%;
-  border: 2px solid red;
+  border: 2px solid #5C9EAD;
   background-color: #F2F0ED;
   border-radius: 10px;
   margin-top: 10px;
