@@ -1,7 +1,7 @@
 [
     {
       "title": "Mon Vieux Grimoire",
-      "src": "images/vieuxgrimoire.png",
+      "src": "images/vieuxgrimoire.webp",
       "description": "Description : Mise en place du back-end d'un site de référencement et de notation de livres avec création d'un espace membre permettant de créer, ajouter ou supprimer des livres de manière sécurisée.",
       "problematique": "Problématique : Gestion du back-end complète avec base de données NoSQL MongoDB. ",
       "competences": "Compétences acquises : NodeJS / MongoDB / Express",
@@ -9,7 +9,7 @@
     },
     {
       "title": "Booki",
-      "src": "images/booki.png",
+      "src": "images/booki.webp",
       "description": "Description : Intégration du contenu conformément à une maquette avec HTML et CSS et prise en compte de la version responsive (tablette et mobile) du site.",
       "problematique": "Problématique : Difficulté à appréhender le système des blocs, d'où la nécessité de procéder au découpage de la maquette.",
       "competences": "Compétences acquises : HTML5 / CSS3 / Maquettage",
@@ -17,7 +17,7 @@
     },
     {
       "title": "Kasa",
-      "src": "images/Kasa.png",
+      "src": "images/Kasa.webp",
       "description": "Description : Refonte totale du design du site de locations immobilières Kasa avec React. Configuration de la navigation entre les pages avec React Router et développement des éléments de l'interface du site grâce aux composants réutilisables de React.",
       "problematique": "Problématique : Prise en compte de la technologie React qui permet de créer des composants qui sont ensuite réutilisables dans l'application (ex. : carte, collapse, bannière, etc)",
       "competences": "Compétences acquises : React / Animations CSS / SASS", 
