@@ -179,7 +179,7 @@ main {
 #a_propos .photo_blabla {
   display: flex;
   width: 90%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #a_propos .photo_blabla h3 {
   margin-top: 0;
